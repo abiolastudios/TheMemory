@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+!.env.example
+
+# locally stored photos (dev without R2)
+/.local-uploads
+/.upload-pieces

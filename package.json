@@ -3,19 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "node node_modules/next/dist/bin/next dev",
+    "build": "node node_modules/next/dist/bin/next build",
+    "start": "node node_modules/next/dist/bin/next start",
+    "lint": "node node_modules/eslint/bin/eslint.js",
+    "db:setup": "node --env-file=.env.local scripts/setup-db.mjs"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1161.0",
+    "archiver": "^8.0.0",
     "next": "16.4.3",
+    "postgres": "^4.0.0",
+    "qrcode": "^1.5.4",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
+    "@types/archiver": "^8.0.0",
     "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
